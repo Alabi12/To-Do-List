@@ -1,6 +1,6 @@
 const getListFromLocal = () => {
-  if (localStorage.getItem("todos")) {
-    return JSON.parse(localStorage.getItem("todos"));
+  if (localStorage.getItem('todos')) {
+    return JSON.parse(localStorage.getItem('todos'));
   }
   return [];
 };
@@ -18,7 +18,7 @@ export const addTodo = (description, toDosArr = toDos) => {
   toDos.push(data);
 
   // Save to local
-  localStorage.setItem("todos", JSON.stringify(toDos));
+  localStorage.setItem('todos', JSON.stringify(toDos));
 };
 
 export const deleteToDo = (index) => {
@@ -31,7 +31,7 @@ export const deleteToDo = (index) => {
   });
 
   //   Save to local
-  localStorage.setItem("todos", JSON.stringify(newArr));
+  localStorage.setItem('todos', JSON.stringify(newArr));
 };
 
 export const updateTodo = (index, message, status = false) => {
@@ -48,7 +48,7 @@ export const updateTodo = (index, message, status = false) => {
   toDos[todoArrIndex] = itemToUpdate;
 
   //   Save to local
-  localStorage.setItem("todos", JSON.stringify(toDos));
+  localStorage.setItem('todos', JSON.stringify(toDos));
 };
 
 export default getListFromLocal;
