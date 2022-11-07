@@ -1,4 +1,4 @@
-# Todo List
+# Todo List - Setup with Webpack
 
 > This is a simple project that allow the user to develop the Todo List. The data is persisted in the local storage.
 
@@ -7,7 +7,7 @@
 - Html
 - Css
 - JavaScript
-- Webpack
+- Webpack 
 
 ## Live Demo (if available)
 

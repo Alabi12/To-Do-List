@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <title>ToDo App</title>
+  <script defer src="main.js"></script></head>
+
+  <body>
+    <header class="header-container"></header>
+    <main class="main-container">
+      <div class="todo-container row">
+        <div class="todo-title">
+          <h1>Today's To Do</h1>
+
+          <i class="fa-solid fa-repeat"></i>
+        </div>
+        <div class="add-todo">
+          <input
+            type="text"
+            id="add-todo"
+            class="add-todo-input"
+            name="todo-text"
+            placeholder="Add to your list..."
+            aria-label="Add to do input"
+          />
+          <label for="add-todo"
+            ><i class="add-todo-icon fa-solid fa-arrow-turn-down"></i
+          ></label>
+        </div>
+        <ul class="todo-list"></ul>
+        <div class="btn-container">
+          <button class="btn-clear">
+            <p>Clear all completed</p>
+          </button>
+        </div>
+      </div>
+    </main>
+    <footer class="footer"></footer>
+  </body>
+</html>
