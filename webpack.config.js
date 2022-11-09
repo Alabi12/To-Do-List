@@ -1,27 +1,27 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+// eslint-disable-next-line
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+// eslint-disable-next-line
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   mode: 'development',
-  entry: './src/index.js',
-  output: {
-    filename: 'main.js',
-    path: path.resolve(__dirname, 'dist'),
-  },
-  devServer: {
-    static: './dist',
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: './src/index.html',
-    }),
-  ],
+  entry: ['./src/style.css', './src/index.js'],
   module: {
     rules: [
       {
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
     ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      title: 'To Do List',
+      template: './src/index.html',
+    }),
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+    }),
+  ],
 };

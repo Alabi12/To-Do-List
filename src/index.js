@@ -5,14 +5,16 @@ import './style.css';
 const todoContainer = document.querySelector('.todo-list');
 const clearListBtn = document.querySelector('.btn-clear');
 
-const itemMarkupGen = (data) => `<li class="todo" data-index="${data.index}" data-completed="${data.completed}"> 
+export const itemMarkupGen = (
+  data,
+) => `<li class="todo" data-index="${data.index}" data-completed="${data.completed}"> 
   <label for="${data.index}"> <input type="checkbox" class="checkbox"></label>
   <input type="text" id="${data.index}" class="item-description-input" name="${data.index}" value="${data.description}">
    <div class="fa-list-icon"><i
   class="fa-solid fa-ellipsis-vertical"></i></div> 
   </li>`;
 
-const populateList = (arr) => {
+export const populateList = (arr) => {
   let listString = '';
 
   const sortedArr = arr.sort((a, b) => a.index - b.index);
