@@ -11,7 +11,7 @@
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://alabi12.github.io/Set-up-project-with-webpack/dist)
+[Live Demo Link](https://alabi12.github.io/To-Do-List/dist/)
 
 ## Getting Started
 
