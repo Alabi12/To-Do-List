@@ -1,0 +1,145 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-grey-1: #495057;
+  --color-grey-2: #868e96;
+  --color-grey-3: #adb5bd;
+  --color-grey-4: #ced4da;
+  --color-grey-5: #f6f6f6;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--color-grey-5);
+  font-family: "Lato", sans-serif;
+  font-size: 1.8rem;
+  color: var(--color-grey-1);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+.todo-title,
+.add-todo,
+.todo {
+  padding: 0.8rem 4rem;
+  border-bottom: 2px solid var(--color-grey-5);
+}
+
+.todo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.todo-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-todo-icon {
+  transform: rotate(90deg);
+}
+
+.add-todo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-todo input {
+  border: none;
+  padding: 0.6rem 0;
+}
+
+.todo input {
+  border: none;
+}
+
+.add-todo input::-moz-placeholder {
+  font-size: 1.9rem;
+  font-style: italic;
+  margin: 20px;
+}
+
+.add-todo input:focus {
+  border: none;
+  outline: none;
+}
+
+.add-todo input::placeholder {
+  font-size: 1.8rem;
+  font-style: italic;
+  height: 100%;
+}
+
+.btn-container {
+  background-color: var(--color-grey-5);
+  height: 5rem;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-clear {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+  color: var(--color-grey-2);
+}
+
+.row {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.main-container {
+  min-height: calc(100vh - 6rem);
+  padding: 5rem 0;
+}
+
+.header,
+.footer {
+  height: 1rem;
+}
+
+.todo-list {
+  list-style: none;
+}
+
+.fa-solid {
+  color: var(--color-grey-2);
+}
+
+.fa-list-icon {
+  margin-left: auto;
+  cursor: pointer;
+  display: flex;
+  gap: 1rem;
+}
+
+.todo-container {
+  padding-top: 2rem;
+  box-shadow: 0 0 0.5rem 0.5rem rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.checked {
+  font-style: italic;
+  text-decoration: line-through;
+  color: var(--color-grey-2);
+}
